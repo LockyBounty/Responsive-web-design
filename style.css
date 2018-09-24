@@ -27,21 +27,161 @@ body {
     width: 100vw;
     background-color: rgb(39, 37, 37);
 }
-/*le background change de couleur en changeant la resolution de la fenêtre:
+/*Ex1:le background change de couleur en changeant la resolution de la fenêtre:
 en dessous de 300px = rouge; entre 300 et 768 = vert;
 et à partir de 768px = bleu*/
-@media only screen and (max-width: 300px) {
+/*Ex2:on affiche le contenu, linké par id (html)-> #(css) selon la resolution*/
+
+/*@media only screen and (max-width: 300px) {
     body {
         background-color: red;
     }
-    
+    #small {
+        padding:3%;
+        font-size:80%; 
+    }
+    #medium {
+        display:none;}
+    #large {
+        display:none;} 
 }
-@media only screen and (min-width:301px) {
+@media only screen and (min-width:301px) and (max-width:768px){
     body {
-        background-color: green;
-    } 
+        background-color: green;} 
+    #small {
+        display:none;}
+    #medium {
+        padding:3%;
+        font-size:90%; 
+    }
+    #large {
+        display:none;}
 }
 @media only screen and (min-width:768px) {
     body {
         background-color: blue;
     } 
+    #small {
+        display:none;}
+    #medium {
+        display:none;}
+    #large { 
+        padding:3%;
+        font-size:100%;      
+    }
+}*/
+/*Ex4: 
+    if small, the 3 divs are stacked on top of one and other.
+    if medium, the first div takes 2/3 of width, the second 1/3 of width and the third the full width.
+    if big, the 3 divs should be next to one and other.
+*/
+@media only screen and (max-width: 300px) {
+    body {
+        
+        background-color: red;
+        
+        
+    }
+    .content{
+        display:flex;
+        
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin:auto;
+        padding:1%;
+        flex-wrap: wrap;
+        max-height:100vh;
+    }
+    .content h1{
+        
+        font-size: 100%;
+        
+    }
+    #small {
+        
+        padding:3%;
+        font-size:80%;
+        background-color: yellow; 
+        
+    }
+    #medium {
+        padding:3%;
+        font-size:80%;
+        background-color: yellow;  }
+       
+    #large {
+        padding:3%;
+        font-size:80%; 
+        background-color: yellow; 
+    }
+       
+}
+@media only screen and (min-width:301px) and (max-width:768px){
+    body {
+        background-color: green;} 
+        .content{
+            display:flex;
+            
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin:auto;
+            padding:1%;
+            flex-wrap: wrap;
+            max-height:100vh;
+        }
+        .content h1{
+            
+            font-size: 100%;
+            
+        }
+    #small {
+        padding:3%;
+        font-size:90%;
+        background-color: gray;} 
+    #medium {
+        padding:3%;
+        font-size:90%;
+        background-color: gray;} 
+    }
+    #large {
+        padding:3%;
+        font-size:90%;
+        background-color: gray;} 
+}
+@media only screen and (min-width:768px) {
+    body {
+        background-color: blue;
+        display:flex;
+        max-width: 100vw;
+        max-height: 100vh;
+    } 
+    .content{
+        
+        
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin:auto;
+        padding:1%;
+        
+        max-height:100%;
+    }
+    .content h1{
+        
+        font-size: 100%;
+        
+    }
+    #small {
+        padding:3%;
+        
+        background-color: orange;} 
+    #medium {
+        padding:3%;
+        
+        background-color: orange;} 
+    }
+    #large {
+        padding:3%;
+        
+        background-color: orange;} 
+}
+}
