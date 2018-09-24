@@ -17,9 +17,7 @@
     box-sizing: border-box;
 }
 
-:root {
-    --background: black;
-}
+
 
 html,
 body {
@@ -29,3 +27,21 @@ body {
     width: 100vw;
     background-color: rgb(39, 37, 37);
 }
+/*le background change de couleur en changeant la resolution de la fenêtre:
+en dessous de 300px = rouge; entre 300 et 768 = vert;
+et à partir de 768px = bleu*/
+@media only screen and (max-width: 300px) {
+    body {
+        background-color: red;
+    }
+    
+}
+@media only screen and (min-width:301px) {
+    body {
+        background-color: green;
+    } 
+}
+@media only screen and (min-width:768px) {
+    body {
+        background-color: blue;
+    } 
