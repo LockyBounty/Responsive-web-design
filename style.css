@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("fonts/Raleway-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("fonts/Oswald-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Oswald2";
+    src: url("fonts/Oswald-Medium.ttf") format("truetype");
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --background: black;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(39, 37, 37);
+}
